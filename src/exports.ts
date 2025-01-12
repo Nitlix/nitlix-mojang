@@ -35,13 +35,13 @@ const MojangInterface = {
         getProfileChangeInfo,
         getSecurityQuestions,
         sendSecurityAnswers,
-        verifySecurityLocation
+        verifySecurityLocation,
     },
     globalMethods: {
         getBlockedServers,
         getUUIDFromUsername,
-        getUUIDsFromUsernames
-    }
-}
+        getUUIDsFromUsernames,
+    },
+};
 
 export default MojangInterface;

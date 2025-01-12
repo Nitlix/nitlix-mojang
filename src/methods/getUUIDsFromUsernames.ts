@@ -1,6 +1,16 @@
-export default async function(username: string): Promise<null | string> {
-    const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
-    if (!response.ok) return null;
+export default async function (
+    usernames: string[]
+): Promise<(string | null)[]> {
+    const response = await fetch(
+        `https://api.minecraftservices.com/minecraft/profile/lookup/bulk/byname`,
+        {
+            method: "POST",
+            body: JSON.stringify(usernames),
+        }
+    );
+
+    if (!response.ok) return [];
     const data = await response.json();
-    return data.id;
+
+    return data.map((user: { id: string; name: string }) => user.id);
 }

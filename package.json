@@ -1,6 +1,6 @@
 {
     "name": "nitlix-mojang",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "🪙 An open-source Javascript Mojang API Wrapper with types.",
     "main": "./dist/exports.js",
     "keywords": [
